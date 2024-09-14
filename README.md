@@ -20,7 +20,6 @@ This repository demonstrates how to integrate gRPC with NestJS, showcasing the i
   - [Generating TypeScript Files](#generating-typescript-files)
   - [Implementing gRPC Microservice](#implementing-grpc-microservice)
 - [Usage Examples](#usage-examples)
-- [Live View](#live-view)
 
 ## Introduction
 
@@ -72,7 +71,7 @@ This project serves as a practical example of how to implement gRPC in a NestJS 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/grpc-nestjs-integration.git
+    git clone https://github.com/naseeb88900/nestjs-grpc-integration.git
     ```
 
 2. Navigate to the project directory:
@@ -93,13 +92,10 @@ This project serves as a practical example of how to implement gRPC in a NestJS 
     nvm install
     ```
 
-4. Install dependencies for both projects:
+4. Install dependencies:
 
     ```bash
-    cd apps/api
-    npm install --legacy-peer-deps
-    cd ../burger-shop
-    npm install --legacy-peer-deps
+    npm install
     ```
 
 5. Generate TypeScript files from the `.proto` definitions:
@@ -199,10 +195,6 @@ return this.grpcService.createBurgerShop(createBurgerShopDto);
 }
 ```
 
-
-## Live View
-
-In process
 
 ## Conclusion
 
