@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package burger_shop;
+
+service BurgerShopService {
+    rpc CreateBurgerShop (BurgerShop) returns (BurgerShop) {}
+    rpc PostOrder (PostBurgerDTO) returns (BurgerShop) {}
+    rpc GetBurgerShops (Empty) returns (BurgerShops) {}
+    rpc GetOrders (Empty) returns (Orders) {}
+}
+
+message BurgerShop {
+    string id = 1; 
+    string name = 2;
+    string location = 3; 
+}
+
+message BurgerShops {
+    repeated BurgerShop shops = 1;
+}
+
+message PostBurgerDTO {
+    string burgerName = 1;
+    int32 quantity = 2; 
+    string customerName = 3;
+}
+
+message Empty {}
+
+message Order {
+    string id = 1;
+    string burgerName = 2;
+    int32 quantity = 3;
+    string customerName = 4;
+}
+
+message Orders {
+    repeated Order orders = 1;
+}
